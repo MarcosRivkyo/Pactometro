@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E9E272EF-5A2D-470C-BC5B-8D482E243575}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Pactometro</RootNamespace>
+    <AssemblyName>Pactometro</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CDTabla.xaml.cs">
+      <DependentUpon>CDTabla.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EleccionesViewModel.cs" />
+    <Compile Include="Pactometro_VentanaDialogo.xaml.cs">
+      <DependentUpon>Pactometro_VentanaDialogo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources_en.Designer.cs">
+      <DependentUpon>Resources_en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources_es.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources_es.resx</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaComparador.xaml.cs">
+      <DependentUpon>VentanaComparador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaConfig.xaml.cs">
+      <DependentUpon>VentanaConfig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaEscaños.xaml.cs">
+      <DependentUpon>VentanaEscaños.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaFecha.xaml.cs">
+      <DependentUpon>VentanaFecha.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaNombre.xaml.cs">
+      <DependentUpon>VentanaNombre.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaPartidos.xaml.cs">
+      <DependentUpon>VentanaPartidos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaPartidos_1.xaml.cs">
+      <DependentUpon>VentanaPartidos_1.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CDTabla.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Partido.cs" />
+    <Compile Include="Proceso.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Pactometro_VentanaDialogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaComparador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaConfig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaEscaños.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaFecha.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaNombre.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaPartidos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="VentanaPartidos_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources_en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources_en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources_es.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources_es.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Resource Include="Fotos\erc.png" />
+    <Resource Include="Fotos\unnamed.jpg" />
+    <Resource Include="Fotos\upn.png" />
+    <Resource Include="Fotos\2345.png" />
+    <Resource Include="Fotos\kisspng-computer-icons-handshake-handshake-5b37211108e9e4.1956331815303396010365.jpg" />
+    <Resource Include="Fotos\12.jpg" />
+    <Resource Include="Fotos\ayuda.PNG" />
+    <Resource Include="Fotos\config.PNG" />
+    <Resource Include="Fotos\limpiar.PNG" />
+    <Resource Include="Fotos\salir.png" />
+    <Resource Include="Fotos\GOB.ico" />
+    <Resource Include="Fotos\1200px-T1logo_square.png" />
+    <Resource Include="Fotos\comparativa.PNG" />
+    <Resource Include="Fotos\normal.PNG" />
+    <Resource Include="Fotos\pactometro.PNG" />
+    <Resource Include="Fotos\sector.PNG" />
+    <Resource Include="Fotos\idioma.PNG" />
+    <Resource Include="Fotos\Enano.PNG" />
+    <Resource Include="Fotos\Grande.PNG" />
+    <Resource Include="Fotos\Mediano.PNG" />
+    <Resource Include="Fotos\Pequeño.PNG" />
+    <Resource Include="Fotos\español.PNG" />
+    <Resource Include="Fotos\ingles.PNG" />
+    <Resource Include="Fotos\claro.PNG" />
+    <Resource Include="Fotos\defecto.PNG" />
+    <Resource Include="Fotos\oscuro.PNG" />
+    <Resource Include="Fotos\Tropical.PNG" />
+    <Resource Include="Fotos\HISTORIAL.PNG" />
+    <None Include="ClassDiagram1.cd" />
+    <Content Include="Manual.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pactometro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fotos\fotonoticia_20200525114746_1200.jpg" />
+    <Resource Include="Fotos\descarga %281%29.png" />
+    <Resource Include="Fotos\descarga %282%29.png" />
+    <Resource Include="Fotos\descarga.png" />
+    <Resource Include="Fotos\ECDIMA20140906_0001_1.jpg" />
+    <Resource Include="Fotos\R.png" />
+    <Resource Include="Fotos\1200_1510956898Logo_JxCat-18154610.jpg" />
+    <Resource Include="Fotos\6a877328-f255-42c2-920d-262c7e0bb978_16-9-aspect-ratio_default_0.jpg" />
+    <Resource Include="Fotos\6485efeb00590.jpeg" />
+    <Resource Include="Fotos\VOX_LOGO_TV_1.080_PX_FONDO_VERDE-1-e1583152027270-1024x580.png" />
+    <Resource Include="Fotos\1200px-Logotipo_del_PSOE.svg_.png" />
+    <Resource Include="Fotos\1200px-PP_icono_2019.svg_.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,162 @@
+﻿<Window x:Class="Pactometro.VentanaConfig"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pactometro"
+        mc:Ignorable="d"
+        Title="VentanaConfig" Height="500" Width="800"
+        Background="CornflowerBlue">
+
+    <Window.Resources>
+        <Style TargetType="Slider">
+            <EventSetter Event="ValueChanged" Handler="Slider_ValueChanged"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="50*"></RowDefinition>
+            <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="10*"></RowDefinition>
+            <RowDefinition Height="40*"></RowDefinition>
+
+            <RowDefinition Height="auto"></RowDefinition>
+
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <TextBox Name="titulo" Text="VENTANA DE CONFIGURACIÓN"  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"  Visibility="Visible" FontSize="20" Foreground="AntiqueWhite"  Background="DarkBlue"  HorizontalContentAlignment="Center" ></TextBox>
+
+
+        <TextBox Name="sub" Text="Color de la ventana principal"  Grid.Row="1" Grid.Column="0" Visibility="Visible" FontSize="10" Background="DarkBlue"  Foreground="Yellow" HorizontalContentAlignment="Center" ></TextBox>
+        <TextBox Name="sub1" Text="Tamaño de la ventana principal"  Grid.Row="1" Grid.Column="1" Visibility="Visible" FontSize="10" Background="DarkBlue" Foreground="Yellow" HorizontalContentAlignment="Center" ></TextBox>
+        <TextBox Name="sub2" Text="Idioma de la aplicación"  Grid.Row="1" Grid.Column="2" Visibility="Visible" FontSize="10" Background="DarkBlue" Foreground="Yellow" HorizontalContentAlignment="Center" ></TextBox>
+
+        <Slider x:Name="Slider_Red" Orientation="Vertical" Minimum="0" Maximum="255"  Width="100" Height="100" Grid.Row="2" Grid.Column="0" ValueChanged="Slider_ValueChanged" Margin="33,10,134,5"/>
+        <TextBlock Text="Red" Foreground="Red" Grid.Row="2" Grid.Column="0" Margin="33,18,197,140" />
+        <Slider x:Name="Slider_Green"  Orientation="Vertical" Minimum="0" Maximum="255"  Width="100" Height="100"  Grid.Row="2" Grid.Column="0" ValueChanged="Slider_ValueChanged" Margin="120,10,47,5"/>
+        <TextBlock Text="Green" Foreground="Green" Grid.Row="2" Grid.Column="0" Margin="110,18,117,140"/>
+        <Slider x:Name="Slider_Blue" Orientation="Vertical" Minimum="0" Maximum="255" Width="100" Height="100" Grid.Row="2" Grid.Column="0" ValueChanged="Slider_ValueChanged" Margin="200,10,233,5" Grid.ColumnSpan="2"/>
+        <TextBlock Text="Blue" Foreground="Blue" Grid.Row="2" Grid.Column="0" Margin="200,18,27,140" />
+
+
+        <Canvas Name="Panel" Grid.Row="3" Grid.RowSpan="5" Grid.Column="0" Background="Yellow">
+
+
+
+        </Canvas>
+
+
+
+        <StackPanel Grid.Row="2" Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Seleccione el tamaño de la ventana:" FontWeight="Bold" Margin="0,0,0,5"/>
+            <ComboBox Name="comboBoxDimensiones"  SelectionChanged="ComboBoxDimensiones_SelectionChanged">
+                <ComboBoxItem Content="Pequeño" />
+                <ComboBoxItem Content="Mediano" />
+                <ComboBoxItem Content="Grande" />
+                <ComboBoxItem Content="Muy Grande" />
+                <ComboBoxItem Content="Maximizar" />
+                <ComboBoxItem Content="Reiniciar" />
+
+            </ComboBox>
+        </StackPanel>
+
+        <ComboBox Name="comboBoxIdioma" Grid.Row="2" Grid.Column="2" Width="120" Height="25" VerticalAlignment="Center" HorizontalAlignment="Center" SelectionChanged="ComboBoxIdioma_Selected">
+            <ComboBoxItem>
+
+                <ComboBoxItem.Content>
+                    
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Fotos/español.PNG" Width="16" Height="16" Margin="0,0,5,0"/>
+                        <TextBlock Text="Español"/>
+                    </StackPanel>
+
+
+                </ComboBoxItem.Content>
+            </ComboBoxItem>
+
+            <ComboBoxItem>
+
+                <ComboBoxItem.Content>
+
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Fotos/ingles.PNG" Width="16" Height="16" Margin="0,0,5,0"/>
+                        <TextBlock Text="Inglés"/>
+                    </StackPanel>
+
+
+                </ComboBoxItem.Content>
+
+            </ComboBoxItem>
+        </ComboBox>
+
+
+
+        <Button Grid.Row="6" Grid.Column="0" Name="aceptar" Content="Aceptar" Click="aceptar_Click"></Button>
+
+        <TextBox Name="sub4" Text="Temas predefinidos"  Grid.Row="3" Grid.Column="1" Height="15" Visibility="Visible" FontSize="10" Background="DarkBlue"  Foreground="Yellow" HorizontalContentAlignment="Center"></TextBox>
+
+        <ListBox Name="listBoxOpciones" HorizontalContentAlignment="Stretch" Grid.Row="4" Grid.RowSpan="6" Grid.Column="1" SelectionChanged="listBoxOpciones_SelectionChanged" Background="CornflowerBlue">
+            <ListBoxItem>
+                <StackPanel Orientation="Vertical">
+                    <Rectangle Width="80" Height="16" Margin="0,0,5,0" Fill="Black" />
+                    <TextBlock Text="Oscuro" FontWeight="Bold" />
+
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel Orientation="Vertical">
+                    <Rectangle Width="80" Height="16" Margin="0,0,5,0" Fill="Gray" />
+                    <TextBlock Text="Claro" FontWeight="Bold" />
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel Orientation="Vertical" >
+                    <Rectangle Width="80" Height="16" Margin="0,0,5,0" Fill="Orange" />
+                    <TextBlock Text="Tropical" FontWeight="Bold" />
+                </StackPanel>
+            </ListBoxItem>
+            <ListBoxItem>
+                <StackPanel Orientation="Vertical">
+                    <Rectangle Width="80" Height="16" Margin="0,0,5,0" Fill="LightBlue" />
+                    <TextBlock Text="Por Defecto" FontWeight="Bold"/>
+                </StackPanel>
+            </ListBoxItem>
+        </ListBox>
+
+
+
+
+        <TextBlock x:Name="textBlockReloj"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   Foreground="Yellow"
+                   Grid.Row="4" Grid.Column="2" >
+            <TextBlock.Effect>
+                <DropShadowEffect Color="Black" Direction="320" ShadowDepth="5" BlurRadius="15"/>
+            </TextBlock.Effect>
+        </TextBlock>
+        
+        
+        
+        <Calendar x:Name="Calendar"  Grid.Row="5" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+
+
+
+    </Grid>
+</Window>

@@ -1,0 +1,268 @@
+﻿<Window x:Class="Pactometro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="576" Width="925"
+        Icon="Fotos/GOB.ico"
+        xmlns:local="clr-namespace:Pactometro.Properties"
+        x:Name="mainWindow">
+    
+    
+    <Window.Resources>
+        <ContextMenu x:Key="ContextMenu">
+            
+            <MenuItem x:Name="HeaderExport" Header="{x:Static local:Resources_es.ExportText}">
+                <MenuItem x:Name="HeaderPNG" Header="{x:Static local:Resources_es.PNGExportText}" Click="ExportarGraficaPNG_Click"/>
+
+                <MenuItem x:Name="HeaderJPG" Header="{x:Static local:Resources_es.JPGExportText}" Click="ExportarGraficaJPG_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="HeaderOpenCD" Header="{x:Static local:Resources_es.OpenCDText}" Click="MostrarNuevaVentana"/>
+            <MenuItem x:Name="HeaderCloseCD" Header="{x:Static local:Resources_es.CloseCDText}" Click="CerrarNuevaVentanaCD"/>
+            <MenuItem x:Name="HeaderExit" Header="{x:Static local:Resources_es.ExitAppText}" Click="CerrarNuevaVentana"/>
+
+        </ContextMenu>
+
+
+        <Style x:Key="BotonBonito" TargetType="Button">
+            <Setter Property="Background" Value="DarkBlue"/>
+            <Setter Property="Foreground" Value="LightBlue"/>
+            <Setter Property="BorderBrush" Value="LightBlue"/>
+            <Setter Property="BorderThickness" Value="4"/>
+            <Setter Property="Padding" Value="15"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect Color="Blue" Direction="330" ShadowDepth="2" Opacity="0.8"/>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+
+
+
+    <Grid Name="Grid">
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+
+        </Grid.ColumnDefinitions>
+
+ 
+
+ 
+
+        <Image Name="ImagenInicio" Source="pactometro.png" Grid.Row="2" Grid.Column="0" Margin="0,7,0,0" Visibility="Visible"/>
+
+        <StackPanel Name="SPanel" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"  HorizontalAlignment="Left" VerticalAlignment="Center" Visibility="Visible" Height="300" Margin="30,0,0,0" Width="300" >
+            <Button x:Name="BotonInicio" Content="{x:Static local:Resources_es.InitiateText}" Style="{StaticResource BotonBonito}" Click="Empezar_Click"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Visibility="Visible" Height="60" Width="300" />
+            <Button x:Name="BotonAyuda" Content="{x:Static local:Resources_es.AidText}" Style="{StaticResource BotonBonito}" Click="Ayuda_Click" HorizontalContentAlignment="Center"  Visibility="Visible" Height="60" Width="300" />
+            <Button x:Name="BotonSalir" Content="{x:Static local:Resources_es.ExitText}" Style="{StaticResource BotonBonito}"  Click="Salir_Click" HorizontalContentAlignment="Center"  Visibility="Visible" Height="60" Width="300" />
+            <Button x:Name="BotonConfig" Content="{x:Static local:Resources_es.ConfigText}" Style="{StaticResource BotonBonito}" Click="Config_Click" HorizontalContentAlignment="Center"  Visibility="Visible" Height="60" Width="300" />
+
+        </StackPanel>
+
+
+        <Button Name="BotonOpciones" Content="{x:Static local:Resources_es.OptionsButtonText}" Grid.Row="0" Grid.Column="0"  Click="MostrarContextMenu"  HorizontalContentAlignment="Left" ContextMenu="{StaticResource ContextMenu}" Visibility="Hidden" Margin="0,0,0,0" />
+
+        <ToolBar Name="ToolbarMain" Grid.Row="0" Grid.Column="2" Width="200" Height="30"  Visibility="Hidden" HorizontalContentAlignment="Stretch">
+
+            <Button Click="CerrarNuevaVentana">
+                <Image Source="Fotos/salir.png" Width="20" Height="20"/>
+                <Button.ToolTip>
+                    <ToolTip x:Name="ToolSalir" Content="{x:Static local:Resources_es.ExitAppText}" ></ToolTip>
+                </Button.ToolTip>
+            </Button>
+
+            <Separator/>
+            <Separator/>
+
+            <Button Click="LimpiarGrafica_Click">
+                <Image Source="Fotos/limpiar.PNG" Width="20" Height="20"/>
+                <Button.ToolTip>
+                    <ToolTip x:Name="ToolLimpiar" Content="{x:Static local:Resources_es.ClearCanvasText}" ></ToolTip>
+                </Button.ToolTip>
+            </Button>
+
+            <Separator/>
+            <Separator/>
+
+            <Button Click="Config_Click">
+                <Image Source="Fotos/config.PNG" Width="20" Height="20"/>
+                <Button.ToolTip>
+                    <ToolTip x:Name="ToolConfig" Content="{x:Static local:Resources_es.OpenConfigText}" ></ToolTip>
+                </Button.ToolTip>
+            </Button>
+
+            <Separator/>
+            <Separator/>
+
+            <Button Click="Ayuda_Click">
+                <Image Source="Fotos/ayuda.PNG" Width="20" Height="20"/>
+                <Button.ToolTip>
+                    <ToolTip x:Name="ToolAyuda" Content="{x:Static local:Resources_es.OpenAidText}" ></ToolTip>
+                </Button.ToolTip>
+            </Button>
+
+
+            <Separator/>
+            <Separator/>
+
+
+
+            <Button x:Name="botonHistorial" Click="MostrarHistorial">
+                <Image Source="Fotos/HISTORIAL.PNG" Width="20" Height="20"/>
+                <Button.ToolTip>
+                    <ToolTip x:Name="ToolHistorial" Content="{x:Static local:Resources_es.HistorialText}" ></ToolTip>
+                </Button.ToolTip>
+            </Button>
+
+            <Popup x:Name="popupProcesos" PlacementTarget="{Binding ElementName=botonHistorial}" StaysOpen="False">
+                <ListBox x:Name="listBoxProcesos" Width="200" Height="200" ItemsSource="{Binding HistorialProcesos}" SelectionChanged="listBoxProcesos_SelectionChanged">
+
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Elecciones}" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+
+                </ListBox>
+            </Popup>
+
+
+        </ToolBar>
+
+
+        <TextBlock Name="titulo" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden" FontSize="15" 
+           FontWeight="Bold" Foreground="Black" TextDecorations="Underline" Margin="10" TextWrapping="Wrap" />
+
+
+
+        <ToolBar Name="ToolbarGraficas" Grid.Row="0" Grid.Column="1" Width="180" Height="30"  Visibility="Hidden" HorizontalContentAlignment="Stretch" >
+
+            <Button Click="DibujarGrafica">
+                <Image Source="Fotos/normal.PNG" Width="20" Height="20"/>
+                <Button.ToolTip>
+                    <ToolTip x:Name="ToolNormal" Content="{x:Static local:Resources_es.DrawNormalText}" />
+                </Button.ToolTip>
+            </Button>
+
+            <Separator/>
+            <Separator/>
+
+            <Button Click="DibujarGraficaComparativa">
+                <Image Source="Fotos/comparativa.PNG" Width="20" Height="20"/>
+                <Button.ToolTip>
+                    <ToolTip x:Name="ToolCompa" Content="{x:Static local:Resources_es.DrawComparativeText}" />
+                </Button.ToolTip>
+            </Button>
+
+            <Separator/>
+            <Separator/>
+
+            <Button Click="Pactometro">
+                <Image Source="Fotos/pactometro.PNG" Width="20" Height="20"/>
+                <Button.ToolTip>
+                    <ToolTip x:Name="ToolPacto" Content="{x:Static local:Resources_es.DrawPactometerText}" />
+                </Button.ToolTip>
+            </Button>
+
+            <Separator/>
+            <Separator/>
+
+            <Button Click="DibujarGraficaSectores">
+                <Image Source="Fotos/sector.PNG" Width="20" Height="20"/>
+                <Button.ToolTip>
+                    <ToolTip x:Name="ToolCircul" Content="{x:Static local:Resources_es.DrawCircularText}" />
+                </Button.ToolTip>
+            </Button>
+
+        </ToolBar>
+
+        
+        <Viewbox Name="Vista" Height="auto" Width="auto" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="4" Visibility="Hidden">
+
+            <Canvas Name="Panel" Height="auto" Width="auto" Margin="20" Background="White" Grid.Column="0" Grid.ColumnSpan="3" Visibility="Hidden">
+            </Canvas>
+
+        </Viewbox>
+        
+        
+
+        <Viewbox Name="Vista_Pactometro" Height="auto" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="4" Visibility="Hidden" Margin="20">
+            <Canvas x:Name="Panel_Pactometro" Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="4"  HorizontalAlignment="Center" VerticalAlignment="Top" Height="500" Width="800" Visibility="Hidden" Background="LightYellow">
+
+                <Canvas Name="CanvasBarrasIzq" Canvas.Left="10" Canvas.Bottom="40" Background="DimGray" Height="400" Width="170" Visibility="Hidden" Canvas.Top="50" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
+
+                <TextBlock Name="EscañosIzq" Canvas.Left="10" Canvas.Bottom="30"  FontSize="20" Foreground="DarkGreen" Text="{Binding EscañosTotalIzq}"  HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-2.286,1.288" Canvas.Top="455"></TextBlock>
+
+                <TextBlock Name="Ganador" Canvas.Left="270" Canvas.Top="5"  FontSize="20" Foreground="DarkGreen" Visibility="Hidden"></TextBlock>
+
+                <TextBlock Name="TextGanador" Canvas.Top="250" Canvas.Left="336" Text="Coalición Ganadora" FontWeight="Bold" FontSize="14" Visibility="Hidden" />
+
+                <ListView Name="ListaGanadores" Canvas.Right="240" Canvas.Bottom="40"  Background="LightBlue" Height="163" Width="314" Visibility="Hidden" HorizontalAlignment="Center" Canvas.Left="243" Canvas.Top="287" VerticalAlignment="Top">
+                    <ListView.View >
+                        <GridView >
+
+                            <GridViewColumn x:Name="ColumnaPartido" Header="{x:Static local:Resources_es.PartyText}" Width="100" DisplayMemberBinding="{Binding Nombre}" />
+                            <GridViewColumn x:Name="ColumnaEscañoPartido" Header="{x:Static local:Resources_es.SeatsText}" Width="100" DisplayMemberBinding="{Binding Escaños}" />
+                            <GridViewColumn x:Name="ColumnaLogo" Header="{x:Static local:Resources_es.LogoText}" Width="100">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image  Source="{Binding LogoPath}" Width="20" Height="20" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+                <TextBlock Name="TextPerdedor" Canvas.Top="18" Canvas.Left="330" Text="Coalición Perdedora" FontWeight="Bold" FontSize="14" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Hidden"/>
+
+
+                <ListView Name="ListaPerdedores" Canvas.Right="240" Canvas.Bottom="40"  Background="LightBlue" Height="157" Width="314" Visibility="Hidden" HorizontalAlignment="Center" Canvas.Left="243" Canvas.Top="60" VerticalAlignment="Top">
+                    <ListView.View >
+                        <GridView >
+
+                            <GridViewColumn x:Name="ColumnaPartido1" Header="{x:Static local:Resources_es.PartyText}" Width="100" DisplayMemberBinding="{Binding Nombre}" />
+                            <GridViewColumn x:Name="ColumnaEscañoPartido1" Header="{x:Static local:Resources_es.SeatsText}" Width="100" DisplayMemberBinding="{Binding Escaños}" />
+                            <GridViewColumn x:Name="ColumnaLogo1" Header="{x:Static local:Resources_es.LogoText}" Width="100">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Image  Source="{Binding LogoPath}" Width="20" Height="20" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+
+
+                <Canvas Name="CanvasBarrasDer" Canvas.Right="25" Canvas.Bottom="40" Background="DimGray" Height="400" Width="170" Visibility="Hidden" Canvas.Left="590" Canvas.Top="50" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                <TextBlock Name="EscañosDer" Canvas.Right="253" Canvas.Bottom="30"  FontSize="20" Foreground="DarkGreen" Text="{Binding EscañosTotalDer}"  HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="2.445,0.688" Canvas.Left="590" Canvas.Top="455"></TextBlock>
+                
+            </Canvas>
+        </Viewbox>
+
+    </Grid>
+
+
+</Window>

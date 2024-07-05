@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AbsoluteMajorityText" xml:space="preserve">
+    <value>MAYORÍA ABSOLUTA</value>
+  </data>
+  <data name="AddProcessText" xml:space="preserve">
+    <value>Añadir proceso electoral</value>
+  </data>
+  <data name="AidText" xml:space="preserve">
+    <value>AYUDA</value>
+  </data>
+  <data name="ClearCanvasText" xml:space="preserve">
+    <value>Limpiar gráfica actual</value>
+  </data>
+  <data name="CloseCDText" xml:space="preserve">
+    <value>Cerrar la ventana de datos(CDTabla)</value>
+  </data>
+  <data name="ConfigText" xml:space="preserve">
+    <value>CONFIGURACION</value>
+  </data>
+  <data name="DateText" xml:space="preserve">
+    <value>FECHA</value>
+  </data>
+  <data name="DrawCircularText" xml:space="preserve">
+    <value>Dibujar gráfica de sectores</value>
+  </data>
+  <data name="DrawComparativeText" xml:space="preserve">
+    <value>Dibujar gráfica comparativa</value>
+  </data>
+  <data name="DrawNormalText" xml:space="preserve">
+    <value>Dibujar gráfica de barras</value>
+  </data>
+  <data name="DrawPactometerText" xml:space="preserve">
+    <value>Dibujar Pactómetro</value>
+  </data>
+  <data name="DrawText" xml:space="preserve">
+    <value>Dibujar gráfica</value>
+  </data>
+  <data name="ElectionText" xml:space="preserve">
+    <value>ELECCIÓN</value>
+  </data>
+  <data name="ExitAppText" xml:space="preserve">
+    <value>Salir de la aplicación</value>
+  </data>
+  <data name="ExitCDText" xml:space="preserve">
+    <value>Salir de la ventana secundaria</value>
+  </data>
+  <data name="ExitText" xml:space="preserve">
+    <value>SALIR</value>
+  </data>
+  <data name="ExportText" xml:space="preserve">
+    <value>Exportar gráfica como imágen</value>
+  </data>
+  <data name="HistorialText" xml:space="preserve">
+    <value>Hsitorial de procesos (USADOS)</value>
+  </data>
+  <data name="InitiateText" xml:space="preserve">
+    <value>INICIO</value>
+  </data>
+  <data name="JPGExportText" xml:space="preserve">
+    <value>_jpg</value>
+  </data>
+  <data name="LanguageText" xml:space="preserve">
+    <value>CAMBIAR IDIOMA</value>
+  </data>
+  <data name="LanguageText1" xml:space="preserve">
+    <value>Hsitorial de procesos (USADOS)</value>
+  </data>
+  <data name="LogoText" xml:space="preserve">
+    <value>Logo</value>
+  </data>
+  <data name="ModifyDateText" xml:space="preserve">
+    <value>Modificar fecha</value>
+  </data>
+  <data name="ModifyMajorityText" xml:space="preserve">
+    <value>Modificar mayoría absoluta</value>
+  </data>
+  <data name="ModifyNameText" xml:space="preserve">
+    <value>Modificar nombre </value>
+  </data>
+  <data name="ModifyPartText" xml:space="preserve">
+    <value>Modificar lista de partidos</value>
+  </data>
+  <data name="ModifyProcessText" xml:space="preserve">
+    <value>Modificar proceso electoral</value>
+  </data>
+  <data name="ModifySeatText" xml:space="preserve">
+    <value>Modificar escaños</value>
+  </data>
+  <data name="OpenAidText" xml:space="preserve">
+    <value>Abrir pdf de ayuda</value>
+  </data>
+  <data name="OpenCDText" xml:space="preserve">
+    <value>Abrir la ventana de datos(CDTabla)</value>
+  </data>
+  <data name="OpenConfigText" xml:space="preserve">
+    <value>Abrir ventana de configuración</value>
+  </data>
+  <data name="OptionsButtonText" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="ParliamentarySeatsText" xml:space="preserve">
+    <value>NÚMERO DE ESCAÑOS</value>
+  </data>
+  <data name="PartyText" xml:space="preserve">
+    <value>Partido</value>
+  </data>
+  <data name="PNGExportText" xml:space="preserve">
+    <value>_png</value>
+  </data>
+  <data name="RemoveProcessText" xml:space="preserve">
+    <value>Eliminar proceso electoral</value>
+  </data>
+  <data name="SeatsText" xml:space="preserve">
+    <value>Escaños</value>
+  </data>
+</root>

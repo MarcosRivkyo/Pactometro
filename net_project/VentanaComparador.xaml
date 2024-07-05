@@ -1,0 +1,52 @@
+﻿<Window x:Class="Pactometro.VentanaComparador"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pactometro"
+        mc:Ignorable="d"
+        Title="VentanaComparador" Height="450" Width="800">
+
+    <Grid>
+
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+
+        <ListBox x:Name="ProcesosListBox"  Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="280" Margin="84,46,0,0"  SelectionMode="Multiple" Grid.RowSpan="2">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Elecciones}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox x:Name="PartidosListBox" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="200" Height="264" Margin="0,46,0,0" Grid.RowSpan="2" SelectionMode="Multiple">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Nombre}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+        <Button Name="boton1" Content="Seleccionar Procesos" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="289,200,0,0" IsDefault="true" Click="SeleccionarProcesos_Click"  RenderTransformOrigin="1.463,0.714" Height="34" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+
+        <Button Name="boton" Content="Dibujar Gráfica" IsEnabled="False" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Margin="289,134,0,0" Click="DibujarGraficaButton_Click" RenderTransformOrigin="1.463,0.714" Height="34" Grid.ColumnSpan="2"/>
+
+    </Grid>
+
+</Window>

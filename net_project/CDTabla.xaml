@@ -1,0 +1,95 @@
+﻿<Window x:Class="Pactometro.CDTabla"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pactometro.Properties"
+        mc:Ignorable="d"
+        Title="CDTabla" Height="450" Width="800"
+        >
+
+    <Grid>
+        
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+            <ColumnDefinition Width="auto"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+
+        <ListView  Name="Lista"   SelectionMode="Single" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="750" Canvas.Left="10" Canvas.Top="10">
+                <ListView.View>
+                    <GridView >
+
+                    <GridViewColumn x:Name="ColumnaElecciones" Header="{x:Static local:Resources_es.ElectionText}" Width="auto" DisplayMemberBinding="{Binding Elecciones}" />
+                    <GridViewColumn x:Name="ColumnaFecha" Header="{x:Static local:Resources_es.DateText}" Width="auto" DisplayMemberBinding="{Binding Fecha}" />
+                    <GridViewColumn x:Name="ColumnaEscaños" Header="{x:Static local:Resources_es.ParliamentarySeatsText}" Width="auto" DisplayMemberBinding="{Binding Escaños}" />
+                    <GridViewColumn x:Name="ColumnaMayoria" Header="{x:Static local:Resources_es.AbsoluteMajorityText}" Width="auto" DisplayMemberBinding="{Binding MayoriaAbsoluta}" />
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ListView  Name="Lista2" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="750" Canvas.Left="89" Canvas.Top="10">
+                <ListView.View >
+                    <GridView >
+
+                    <GridViewColumn x:Name="ColumnaPartido" Header="{x:Static local:Resources_es.PartyText}" Width="100" DisplayMemberBinding="{Binding Nombre}" />
+                    <GridViewColumn x:Name="ColumnaEscañoPartido" Header="{x:Static local:Resources_es.SeatsText}" Width="100" DisplayMemberBinding="{Binding Escaños}" />
+                    <GridViewColumn x:Name="ColumnaLogo" Header="{x:Static local:Resources_es.LogoText}" Width="100">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image  Source="{Binding LogoPath}" Width="20" Height="20" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+
+                </GridView>
+                </ListView.View>
+            </ListView>
+
+        <Menu x:Name="miMenu" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Center" Foreground="White" Background="DodgerBlue">
+
+            <MenuItem x:Name="MenuOpciones" Header="{x:Static local:Resources_es.OptionsButtonText}">
+
+                <MenuItem Name="OpcionAgregar" Header="{x:Static local:Resources_es.AddProcessText}" Click="AgregarProceso_Click" Background="Blue"/>
+                <MenuItem Name="OpcionEliminar"  Header="{x:Static local:Resources_es.RemoveProcessText}" Click="EliminarProceso_Click" Background="Blue"/>
+                <MenuItem Name="OpcionModificar" Header="{x:Static local:Resources_es.ModifyProcessText}" Click="ModificarProceso_Click" Background="Blue">
+
+                    <MenuItem Name="OpcionNombre" Header="{x:Static local:Resources_es.ModifyNameText}" Click="ModificarNombre_Click" Visibility="Collapsed" Foreground="Black" Background="LightBlue"/>
+                    <MenuItem Name="OpcionFecha" Header="{x:Static local:Resources_es.ModifyDateText}" Click="ModificarFecha_Click" Visibility="Collapsed" Foreground="Black" Background="LightBlue"/>
+                    <MenuItem Name="OpcionEscaños" Header="{x:Static local:Resources_es.ModifySeatText}" Click="ModificarEscaños_Click" Visibility="Collapsed" Foreground="Black" Background="LightBlue"/>
+                    <MenuItem Name="OpcionPartidos" Header="{x:Static local:Resources_es.ModifyPartText}"  Click="ModificarPartidos_Click" Visibility="Collapsed" Foreground="Black" Background="LightBlue"/>
+
+
+                </MenuItem>
+
+                <MenuItem Name="OpcionDibujar" Header="{x:Static local:Resources_es.DrawText}" Background="Blue">
+                    <MenuItem Name="OpcionNormal" Header="{x:Static local:Resources_es.DrawNormalText}" Click="MenuItem_Click_1" Foreground="Black" Background="LightBlue"/>
+                    <MenuItem Name="OpcionComparativa" Header="{x:Static local:Resources_es.DrawComparativeText  }" Click="MenuItem_Click_2" Foreground="Black" Background="LightBlue"/>
+                    <MenuItem Name="OpcionPactometro" Header="{x:Static local:Resources_es.DrawPactometerText}" Click="MenuItem_Click_3" Foreground="Black"  Background="LightBlue"/>
+                    <MenuItem Name="OpcionCircular" Header="{x:Static local:Resources_es.DrawCircularText}" Click="MenuItem_Click_4"  Foreground="Black"  Background="LightBlue"/>
+                </MenuItem>
+                
+                <MenuItem Name="OpcionSalir" Header="{x:Static local:Resources_es.ExitCDText}" Click="Salir_Click" Background="Blue"/>
+
+            </MenuItem>
+
+
+        </Menu>
+
+    </Grid>
+    
+</Window>

@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Comment CommentText="Vista">
+    <Position X="15.796" Y="0.5" Height="0.386" Width="1.106" />
+  </Comment>
+  <Comment CommentText="ViewModel">
+    <Position X="1.667" Y="10.253" Height="0.462" Width="1.408" />
+  </Comment>
+  <Comment CommentText="Model">
+    <Position X="8.868" Y="9.813" Height="0.415" Width="0.838" />
+  </Comment>
+  <Class Name="Partido">
+    <Position X="8" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAIAAAgAAIgAAAGACAABAAgAAAAAA=</HashCode>
+      <FileName>Partido.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Proceso">
+    <Position X="5.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAEAIAAAAAAIgAAQKAgAESAIAAEAAAA=</HashCode>
+      <FileName>Proceso.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pactometro.EleccionesViewModel">
+    <Position X="3.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgQAAGCIAABACAIAgAAAAAgJBCACAQQgICAIAgAEA=</HashCode>
+      <FileName>EleccionesViewModel.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="procesoSeleccionado" />
+      <Property Name="ColoresPartidos" />
+      <Property Name="RutasDeArchivos" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="procesosSeleccionados" />
+      <Field Name="partidosSeleccionados" />
+      <Field Name="partidos" />
+      <Field Name="historialProcesos" />
+      <Field Name="otrasVentanas" />
+      <Property Name="ProcesosSeleccionados" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pactometro.MainWindow">
+    <Position X="11" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEgBAIQAAAAQACKIAJFQAECAAAAxoDIACAEARABA0BE=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.1" />
+  </Class>
+  <Class Name="System.Collections.Generic.Dictionary&lt;TKey, TValue&gt;" Collapsed="true">
+    <Position X="0.5" Y="13" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Collections.ObjectModel.ObservableCollection&lt;T&gt;" Collapsed="true">
+    <Position X="28.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Window" Collapsed="true">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Pactometro.CDTabla">
+    <Position X="6.5" Y="2" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="Pactometro.CDTabla.DibujarGraficaEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CDTabla.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Pactometro.CDTabla.DibujarGraficaComparativaEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CDTabla.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Pactometro.CDTabla.PactometroHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CDTabla.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+      <Delegate Name="Pactometro.CDTabla.DibujarGraficaSectoresEventHandler" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>CDTabla.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAIICACQAAAAAADIAKFAAAQCAA8EACAAAhCEAAAAMAE=</HashCode>
+      <FileName>CDTabla.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="5.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Pactometro.VentanaDialogo">
+    <Position X="4.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACQAAAAAIAAAAABAKAAAABQEAggAAAgAAA=</HashCode>
+      <FileName>Pactometro_VentanaDialogo.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pactometro.VentanaComparador">
+    <Position X="8.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAEAAAAAAAAAAEAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VentanaComparador.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pactometro.ColorSeleccionadoEventArgs" Collapsed="true">
+    <Position X="27" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VentanaConfig.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pactometro.VentanaConfig">
+    <Position X="13.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUgAAAAABAAAABAAAAAAAAAgAAAACAAAAAAAABEEAA=</HashCode>
+      <FileName>VentanaConfig.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pactometro.VentanaEscaños">
+    <Position X="15.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQABAAAAAAAAACAIAAAAAAAABAAAACAAA=</HashCode>
+      <FileName>VentanaEscaños.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pactometro.VentanaFecha" Collapsed="true">
+    <Position X="17.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAEABAAAAAAAAACAIAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>VentanaFecha.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pactometro.VentanaNombre" Collapsed="true">
+    <Position X="20" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAABAAAAAAAAACAAAAAAAAAAhAAAACAAA=</HashCode>
+      <FileName>VentanaNombre.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pactometro.VentanaPartidos" Collapsed="true">
+    <Position X="22.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAGAAAAAAAAAAAEABAAAAAAAAAAAAAAAQAQ=</HashCode>
+      <FileName>VentanaPartidos.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Pactometro.VentanaPartidos_1" Collapsed="true">
+    <Position X="24.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAACBIBAACAAAAAEAAAAAAAAAAAAAEAAAAAQ=</HashCode>
+      <FileName>VentanaPartidos_1.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
